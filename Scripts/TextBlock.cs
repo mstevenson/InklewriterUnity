@@ -15,7 +15,6 @@ namespace Inklewriter.Unity
 			if (!string.IsNullOrEmpty (p.Image)) {
 				var imageName = Path.GetFileNameWithoutExtension (p.Image);
 				var sprite = Resources.Load<Sprite> (imageName);
-				Debug.Log ("have sprite");
 				if (sprite) {
 					image.sprite = sprite;
 					image.SetNativeSize ();

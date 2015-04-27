@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 using Inklewriter;
 using Inklewriter.Player;
 
@@ -14,6 +15,8 @@ namespace Inklewriter.Unity
 		public ScrollRect scroll;
 
 		StoryPlayer player;
+
+		List<Chunk> chunks = new List<Chunk> ();
 
 		void Start ()
 		{
@@ -33,13 +36,15 @@ namespace Inklewriter.Unity
 			InstantiateChunk (firstChunk);
 		}
 
-		public void InstantiateChunk (PlayChunk c)
+		public void InstantiateChunk (PlayChunk c, Option chosenOption = null)
 		{
 			chunk.gameObject.SetActive (false);
-			var obj = Instantiate (chunk.gameObject) as GameObject;
-			obj.SetActive (true);
-			obj.transform.SetParent (chunk.transform.parent);
-			obj.GetComponent<Chunk> ().Set (c, this);
+			var chunkObj = Instantiate (chunk.gameObject) as GameObject;
+			chunkObj.SetActive (true);
+			chunkObj.transform.SetParent (chunk.transform.parent);
+			var chunkComponent = chunkObj.GetComponent<Chunk> ();
+			chunkComponent.Set (c, chosenOption, this);
+			chunks.Add (chunkComponent);
 
 			Canvas.ForceUpdateCanvases ();
 
@@ -58,8 +63,22 @@ namespace Inklewriter.Unity
 		public void SelectOption (Option option)
 		{
 			if (option.LinkStitch != null) {
+				if (chunks.Count > 0) {
+					chunks[chunks.Count - 1].Disable ();
+				}
 				var chunk = player.GetChunkFromStitch (option.LinkStitch);
-				InstantiateChunk (chunk);
+				InstantiateChunk (chunk, option);
+			}
+		}
+
+		public void RewindToChunk (Chunk chunk)
+		{
+			for (int i = chunks.Count - 1; i >= 0; i--)
+			{
+				if (chunks[i] == chunk) {
+					return;
+				}
+				Destroy (chunks[i]);
 			}
 		}
 	}

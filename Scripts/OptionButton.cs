@@ -18,6 +18,16 @@ namespace Inklewriter.Unity
 				player.SelectOption (option);
 			});
 		}
+
+		public void Enable ()
+		{
+			button.interactable = true;
+		}
+
+		public void Disable ()
+		{
+			button.interactable = false;
+		}
 	}
 	
 }
