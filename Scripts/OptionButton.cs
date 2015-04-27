@@ -10,14 +10,9 @@ namespace Inklewriter.Unity
 		public Text text;
 		public Button button;
 		
-		Option option;
-		InklewriterPlayer player;
-		
-		public void Set (string text, Option option, InklewriterPlayer player)
+		public void Set (Option option, InklewriterPlayer player)
 		{
-			this.text.text = text;
-			this.option = option;
-			this.player = player;
+			this.text.text = option.Text;
 			
 			button.onClick.AddListener (delegate {
 				player.SelectOption (option);
