@@ -189,7 +189,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button Text
+  m_Text: Option One
 --- !u!222 &206484790
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -222,6 +222,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 254584267}
   - 114: {fileID: 254584268}
+  - 114: {fileID: 254584269}
   m_Layer: 5
   m_Name: Text Block
   m_TagString: Untagged
@@ -239,6 +240,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1890325841}
   - {fileID: 1415887893}
   m_Father: {fileID: 1462511052}
   m_RootOrder: 0
@@ -261,12 +263,25 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 20
-    m_Bottom: 20
-  m_ChildAlignment: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 1
   m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
+--- !u!114 &254584269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 254584266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61bb5f07017c441b594b9e11caaccbca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1415887891}
+  image: {fileID: 1890325842}
 --- !u!1 &533468461
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,6 +295,7 @@ GameObject:
   - 114: {fileID: 533468466}
   - 114: {fileID: 533468465}
   - 114: {fileID: 533468467}
+  - 114: {fileID: 533468468}
   m_Layer: 5
   m_Name: Option Button
   m_TagString: Untagged
@@ -317,7 +333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .79411763, g: .79411763, b: .79411763, a: 1}
+  m_Color: {r: .970588207, g: .970588207, b: .970588207, a: 1}
   m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
@@ -374,7 +390,7 @@ MonoBehaviour:
     m_PressedColor: {r: .784313738, g: .784313738, b: .784313738, a: 1}
     m_DisabledColor: {r: .784313738, g: .784313738, b: .784313738, a: .501960814}
     m_ColorMultiplier: 1
-    m_FadeDuration: .100000001
+    m_FadeDuration: .0799999982
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
@@ -404,6 +420,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 206484789}
   button: {fileID: 533468466}
+--- !u!114 &533468468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 533468461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: .838235259, g: .838235259, b: .838235259, a: 1}
+  m_EffectDistance: {x: 0, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &609172273
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,8 +662,8 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 30
-    m_Bottom: 30
+    m_Top: 35
+    m_Bottom: 35
   m_ChildAlignment: 1
   m_Spacing: 0
   m_ChildForceExpandWidth: 0
@@ -700,7 +730,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: .316176474, g: .316176474, b: .316176474, a: .0196078438}
+  m_BackGroundColor: {r: .463235319, g: .463235319, b: .463235319, a: 1}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -779,15 +809,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.39999998
-  m_Text: "We had been sitting up the last few hours: he, pasting extracts into his
-    commonplace book while I read through a poor treatise on African diseases recently
-    published by the university, and it was likely we would sit up a while yet, as
-    the hour was still early, despite the heavy dark outside.\n\u201CMore coal, Holmes?\u201D\n\u201CIf
-    you\u2019d be so kind.\u201D He waved a narrow hand towards the grate. \u201CI
-    have no energy for the cold this evening.\u201D\nI got to my feet, and scuttled
-    a few more coals onto the embers of the fire. They took quickly and the room began
-    to warm a little. A rogue spark jumped and landed on one of the many piles of
-    papers lying about the room, and I quickly batted it down."
+  m_Text: Lorem ipsum dolor sit amet, vero tempor eu mei, nec omnis perfecto indoctum
+    in. Ne iuvaret ullamcorper vel, vel dictas appellantur ea. Vix dolores gloriatur
+    interpretaris ut. Per te invenire vituperata. At sed diam latine accumsan, ei
+    deseruisse constituam vis, alii putant vulputate vis ut.
 --- !u!222 &1415887892
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -805,7 +830,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 254584267}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -855,6 +880,7 @@ GameObject:
   - 114: {fileID: 1462511056}
   - 114: {fileID: 1462511055}
   - 114: {fileID: 1462511057}
+  - 114: {fileID: 1462511058}
   m_Layer: 5
   m_Name: Chunk
   m_TagString: Untagged
@@ -935,8 +961,8 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
+    m_Top: 30
+    m_Bottom: 20
   m_ChildAlignment: 1
   m_Spacing: 0
   m_ChildForceExpandWidth: 0
@@ -952,8 +978,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804ea2c02d4fc4d9499782b2d13e394c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 1415887891}
+  text: {fileID: 254584269}
   option: {fileID: 533468467}
+--- !u!114 &1462511058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1462511051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: .83088237, g: .83088237, b: .83088237, a: 1}
+  m_EffectDistance: {x: 0, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1584938274
 GameObject:
   m_ObjectHideFlags: 0
@@ -1002,9 +1042,70 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 10
-    m_Bottom: 30
+    m_Top: 20
+    m_Bottom: 10
   m_ChildAlignment: 1
   m_Spacing: 1
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
+--- !u!1 &1890325840
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1890325841}
+  - 222: {fileID: 1890325843}
+  - 114: {fileID: 1890325842}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1890325841
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1890325840}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 254584267}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &1890325842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1890325840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1890325843
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1890325840}

@@ -7,7 +7,7 @@ namespace Inklewriter.Unity
 {
 	public class Chunk : MonoBehaviour
 	{
-		public Text text;
+		public TextBlock text;
 		public OptionButton option;
 		
 		public void Set (PlayChunk chunk, InklewriterPlayer player)
@@ -17,7 +17,7 @@ namespace Inklewriter.Unity
 				var obj = Instantiate (text.gameObject) as GameObject;
 				obj.SetActive (true);
 				obj.transform.SetParent (text.transform.parent);
-				obj.GetComponent<Text> ().text = p.Text;
+				obj.GetComponent<TextBlock> ().Set (p);
 			}
 
 			option.gameObject.SetActive (false);
@@ -30,6 +30,7 @@ namespace Inklewriter.Unity
 				obj.transform.SetParent (option.transform.parent);
 				obj.GetComponent<OptionButton> ().Set (o.content, player);
 			}
+			option.transform.parent.SetAsLastSibling ();
 		}
 	}
 	
