@@ -15,4 +15,4 @@ Instructions
 License
 -------
 
-The InkleSharp source code is licensed under the MIT License. Inkle story files may be used commercially with a credit to inkle studios.
+The InklewriterUnity source code is licensed under the MIT License. Inkle story files may be used commercially with a credit to inkle studios.
