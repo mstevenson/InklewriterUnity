@@ -27,8 +27,7 @@ namespace Inklewriter.Unity
 			}
 
 			string storyJson = resource.text;
-			StoryModel model = new StoryModel ();
-			model.ImportStory (storyJson);
+			StoryModel model = StoryModel.Create (storyJson);
 
 			this.player = new StoryPlayer (model, new UnityMarkupConverter ());
 
