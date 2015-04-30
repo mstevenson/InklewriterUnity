@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.IO;
 using Inklewriter.MarkupConverters;
 
 namespace Inklewriter.Unity
