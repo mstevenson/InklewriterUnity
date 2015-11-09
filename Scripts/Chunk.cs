@@ -25,14 +25,14 @@ namespace Inklewriter.Unity
 
 			option.gameObject.SetActive (false);
 			foreach (var o in chunk.Options) {
-				if (!o.isVisible) {
+				if (!o.IsVisible) {
 					continue;
 				}
 				var obj = Instantiate (option.gameObject) as GameObject;
 				obj.SetActive (true);
 				obj.transform.SetParent (option.transform.parent);
 				var optionButton = obj.GetComponent<OptionButton> ();
-				optionButton.Set (o.content, player);
+				optionButton.Set (o.Content, player);
 				options.Add (optionButton);
 			}
 			option.transform.parent.SetAsLastSibling ();

@@ -31,7 +31,7 @@ namespace Inklewriter.Unity
 
 			this.player = new StoryPlayer (model, new UnityMarkupConverter ());
 
-			var firstChunk = player.GetChunkFromStitch (player.InitialStitch);
+			var firstChunk = player.CreateFirstChunk ();
 			InstantiateChunk (firstChunk);
 		}
 
@@ -65,7 +65,7 @@ namespace Inklewriter.Unity
 				if (chunks.Count > 0) {
 					chunks[chunks.Count - 1].Disable ();
 				}
-				var chunk = player.GetChunkFromStitch (option.LinkStitch);
+				var chunk = player.CreateChunkForStitch (option.LinkStitch);
 				InstantiateChunk (chunk, option);
 			}
 		}
